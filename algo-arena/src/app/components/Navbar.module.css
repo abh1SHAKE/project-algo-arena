@@ -1,14 +1,37 @@
 .navbar-container-wrapper {
-    height: 80px;
+    height: 100px;
     width: 100vw;
 
     .navbar-container {
-        margin: 0px 80px;
+        margin: 0px 120px;
         height: inherit;
 
-        .logo-container {
-            font-size: 16px;
-            font-weight: 500;
+        .navbar-leftside {
+            .logo-container {
+                font-size: 20px;
+                font-weight: 700;
+            }
+        }
+
+        .navbar-rightside {
+            .cta-container {
+                button {
+                    cursor: pointer;
+                    color: var(--white);
+                    font-weight: 500;
+                    font-size: 16px;
+                    font-family: inherit;
+                    background: transparent;
+                    padding: 4px 8px;
+                    border-radius: 8px;
+                    border: 2px solid var(--aquamarine);
+                }
+
+                button:hover {
+                    background: var(--aquamarine);
+                    color: var(--mirage);
+                }
+            }
         }
     }
 }

@@ -1,0 +1,14 @@
+.navbar-container-wrapper {
+    height: 80px;
+    width: 100vw;
+
+    .navbar-container {
+        margin: 0px 80px;
+        height: inherit;
+
+        .logo-container {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}

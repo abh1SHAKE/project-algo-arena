@@ -1,0 +1,5 @@
+.auth-page-wrapper {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(170deg, hsla(0, 0%, 11%, 1) 58%, hsla(137, 42%, 16%, 1) 100%);
+}

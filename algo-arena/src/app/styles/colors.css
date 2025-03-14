@@ -1,7 +1,13 @@
 :root {
-    --green-light: #84ca47;
-    --green-medium: #2db127;
-    --green-dark: #0a9c2d;
+    --mirage: #141b2e;
+    --malachite: #09c74d;
+    --aquamarine: #77fcba;
+    --salem: #049444;
+    --firefly: #0b2c32;
+    --fungreen: #047c3c;
+    --zuccini: #064734;
+    --tiber: #063c33;
+    --bunting: #0c1430;
 
     --gray-light: #666666;
     --gray-medium: #4c4c4c;
@@ -11,67 +17,32 @@
     --black: #090909;
 }
 
-.bg-green-light {
-    background-color: var(--green-light);
-}
+.text-mirage { color: var(--mirage); }
+.text-malachite { color: var(--malachite); }
+.text-aquamarine { color: var(--aquamarine); }
+.text-salem { color: var(--salem); }
+.text-firefly { color: var(--firefly); }
+.text-fungreen { color: var(--fungreen); }
+.text-zuccini { color: var(--zuccini); }
+.text-tiber { color: var(--tiber); }
+.text-bunting { color: var(--bunting); }
+.text-gray-light { color: var(--gray-light); }
+.text-gray-medium { color: var(--gray-medium); }
+.text-gray-dark { color: var(--gray-dark); }
+.text-white { color: var(--white); }
+.text-black { color: var(--black); }
 
-.bg-green-medium {
-    background-color: var(--green-medium);
-}
-
-.bg-green-dark {
-    background-color: var(--green-dark);
-}
-
-.bg-gray-light {
-    background-color: var(--gray-light);
-}
-
-.bg-gray-medium {
-    background-color: var(--gray-medium);
-}
-
-.bg-gray-dark {
-    background-color: var(--gray-dark);
-}
-
-.bg-white {
-    background-color: var(--white);
-}
-
-.bg-black {
-    background-color: var(--black);
-}
-
-.text-green-light {
-    color: var(--green-light);
-}
-
-.text-green-medium {
-    color: var(--green-medium);
-}
-
-.text-green-dark {
-    color: var(--green-dark);
-}
-
-.text-gray-light {
-    color: var(--gray-light);
-}
-
-.text-gray-medium {
-    color: var(--gray-medium);
-}
-
-.text-gray-dark {
-    color: var(--gray-dark);
-}
-
-.text-white {
-    color: var(--white);
-}
-
-.text-black {
-    color: var(--black);
-}
-  
+.bg-mirage { background-color: var(--mirage); }
+.bg-malachite { background-color: var(--malachite); }
+.bg-aquamarine { background-color: var(--aquamarine); }
+.bg-salem { background-color: var(--salem); }
+.bg-firefly { background-color: var(--firefly); }
+.bg-fungreen { background-color: var(--fungreen); }
+.bg-zuccini { background-color: var(--zuccini); }
+.bg-tiber { background-color: var(--tiber); }
+.bg-bunting { background-color: var(--bunting); }
+.bg-gray-light { background-color: var(--gray-light); }
+.bg-gray-medium { background-color: var(--gray-medium); }
+.bg-gray-dark { background-color: var(--gray-dark); }
+.bg-white { background-color: var(--white); }
+.bg-black { background-color: var(--black); }

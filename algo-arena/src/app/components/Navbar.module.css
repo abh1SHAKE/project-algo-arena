@@ -16,6 +16,7 @@
         .navbar-rightside {
             .cta-container {
                 button {
+                    font-weight: 700;
                     cursor: pointer;
                     color: var(--white);
                     font-weight: 500;
@@ -25,6 +26,7 @@
                     padding: 4px 8px;
                     border-radius: 8px;
                     border: 2px solid var(--aquamarine);
+                    transition: all 150ms ease-in-out;
                 }
 
                 button:hover {

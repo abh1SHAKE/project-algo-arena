@@ -17,7 +17,7 @@ const Navbar:React.FC<NavbarProps> = () => {
                 <div className={`${styles["navbar-rightside"]} flex-row align-items-center`}>
                     <div className={`${styles["cta-container"]}`}>
                         <button>
-                            Sign in
+                            SIGN IN
                         </button>
                     </div>
                 </div>

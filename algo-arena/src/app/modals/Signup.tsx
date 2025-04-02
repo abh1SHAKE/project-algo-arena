@@ -1,11 +1,15 @@
+'use client'
 import React from 'react';
 import styles from './Signup.module.css';
+import { useDispatch } from 'react-redux';
+import { setModalState } from '../redux/slices/authModalSlice';
 
-type SignupProps = {
-    
-};
+const Signup:React.FC = () => {
+    const dispatch = useDispatch();
 
-const Signup:React.FC<SignupProps> = () => {
+    const handleClick = (type: "login" | "signup" | "forgotPassword") => {
+        dispatch(setModalState({isOpen: true, type}));
+    }
     return (
         <form>
             <div className={`${styles["form-heading"]}`}>
@@ -33,7 +37,7 @@ const Signup:React.FC<SignupProps> = () => {
                 </div>
                 <div className={`${styles["cta-container-bottom"]} flex-row justify-content-center`}>
                     <span>Already have an account?</span>
-                    <a href='#' className='text-white'>LOG IN</a>
+                    <a href='#' className='text-white' onClick={() => handleClick("login")}>LOG IN</a>
                 </div>
             </div>
         </form>

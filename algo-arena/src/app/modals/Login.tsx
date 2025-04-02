@@ -1,11 +1,15 @@
+'use client'
 import React from 'react';
 import styles from './Login.module.css'
+import { useDispatch } from 'react-redux';
+import { setModalState } from '../redux/slices/authModalSlice';
 
-type LoginProps = {
-    
-};
+const Login:React.FC = () => {
+    const dispatch = useDispatch();
 
-const Login:React.FC<LoginProps> = () => {
+    const handleClick = (type: "login" | "signup" | "forgotPassword") => {
+        dispatch(setModalState({isOpen: true, type}));
+    }
     return (
         <form>
             <div className={`${styles["form-heading"]}`}>
@@ -23,7 +27,7 @@ const Login:React.FC<LoginProps> = () => {
             </div>
             <div className={`${styles["cta-container"]} flex-column`}>
                 <div className={`${styles["cta-container-top"]} flex-row align-items-center justify-content-space-between`}>
-                    <div>
+                    <div onClick={() => handleClick("forgotPassword")}>
                         <a href='#' className='text-white'>FORGOT PASSWORD?</a>
                     </div>
                     <div>
@@ -34,7 +38,7 @@ const Login:React.FC<LoginProps> = () => {
                 </div>
                 <div className={`${styles["cta-container-bottom"]} flex-row justify-content-center`}>
                     <span>Not Registered?</span>
-                    <a href='#' className='text-white'>CREATE ACCOUNT</a>
+                    <a href='#' className='text-white' onClick={() => handleClick("signup")}>CREATE ACCOUNT</a>
                 </div>
             </div>
         </form>

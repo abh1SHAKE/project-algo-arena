@@ -1,11 +1,15 @@
+'use client'
 import React from 'react';
 import styles from './Navbar.module.css';
+import { useDispatch } from 'react-redux';
+import { openModal } from '../redux/slices/authModalSlice';
 
-type NavbarProps = {
-    
-};
+const Navbar:React.FC = () => {
+    const dispatch = useDispatch();
+    const handleClick = () => {
+        dispatch(openModal("login"));
+    };
 
-const Navbar:React.FC<NavbarProps> = () => {
     return (
         <div className={`${styles["navbar-container-wrapper"]}`}>
             <div className={`${styles["navbar-container"]} flex-row justify-content-space-between`}>
@@ -16,7 +20,9 @@ const Navbar:React.FC<NavbarProps> = () => {
                 </div>
                 <div className={`${styles["navbar-rightside"]} flex-row align-items-center`}>
                     <div className={`${styles["cta-container"]}`}>
-                        <button>
+                        <button
+                            onClick={handleClick}
+                        >
                             SIGN IN
                         </button>
                     </div>

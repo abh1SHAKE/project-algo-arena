@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
+'use client'
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 const poppins = Poppins({ 
   subsets: ["latin"],
@@ -8,28 +10,18 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const viewport = {
-  width: "device-width",
-  initialScale: 1.0,
-}
-
-export const metadata: Metadata = {
-  title: "Algo Arena",
-  description: "Solve, compete, dominate...",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <Provider store={store}>
       <html lang="en">
         <body className={`${poppins.variable}`}>
           {children}
         </body>
       </html>
-    </>
+    </Provider>
   );
 }

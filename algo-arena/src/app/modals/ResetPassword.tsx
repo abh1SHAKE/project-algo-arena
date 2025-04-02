@@ -1,18 +1,14 @@
 import React from 'react';
 import styles from './ResetPassword.module.css'
 
-type ResetPasswordProps = {
-    
-};
-
-const ResetPassword:React.FC<ResetPasswordProps> = () => {
+const ResetPassword:React.FC = () => {
     return (
         <form>
             <div className={`${styles["form-heading"]}`}>
                 RESET PASSWORD
             </div>
             <div className={`${styles["form-text"]}`}>
-                Forgotten your password? Enter your email address and we'll send you
+                Forgotten your password? Enter your email address and we&apos;ll send you
                 an email allowing you to reset it.
             </div>
             <div className={`${styles["form-container"]} flex-column`}>

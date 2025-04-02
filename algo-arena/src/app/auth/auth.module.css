@@ -7,3 +7,9 @@
         #045B34 100%
     );
 }
+
+.text-scramble {
+    position: absolute;
+    top: 220px;
+    left: 120px;
+}

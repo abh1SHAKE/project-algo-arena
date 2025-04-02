@@ -37,7 +37,7 @@ const Signup:React.FC = () => {
                 </div>
                 <div className={`${styles["cta-container-bottom"]} flex-row justify-content-center`}>
                     <span>Already have an account?</span>
-                    <a href='#' className='text-white' onClick={() => handleClick("login")}>LOG IN</a>
+                    <a className='text-white cursor-pointer' onClick={() => handleClick("login")}>LOG IN</a>
                 </div>
             </div>
         </form>

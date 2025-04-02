@@ -27,3 +27,11 @@
 .position-absolute {
     position: absolute;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+}

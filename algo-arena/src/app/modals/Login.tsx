@@ -28,7 +28,7 @@ const Login:React.FC = () => {
             <div className={`${styles["cta-container"]} flex-column`}>
                 <div className={`${styles["cta-container-top"]} flex-row align-items-center justify-content-space-between`}>
                     <div onClick={() => handleClick("forgotPassword")}>
-                        <a href='#' className='text-white'>FORGOT PASSWORD?</a>
+                        <a className='text-white cursor-pointer'>FORGOT PASSWORD?</a>
                     </div>
                     <div>
                         <button>
@@ -38,7 +38,7 @@ const Login:React.FC = () => {
                 </div>
                 <div className={`${styles["cta-container-bottom"]} flex-row justify-content-center`}>
                     <span>Not Registered?</span>
-                    <a href='#' className='text-white' onClick={() => handleClick("signup")}>CREATE ACCOUNT</a>
+                    <a className='text-white cursor-pointer' onClick={() => handleClick("signup")}>CREATE ACCOUNT</a>
                 </div>
             </div>
         </form>

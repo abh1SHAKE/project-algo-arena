@@ -116,7 +116,7 @@ const TextScramble: React.FC<TextScrambleProps> = ({
   return (
     <>
       {displayTexts.map((text, index) => (
-        <div key={index} className={`${styles["wrapper-container"]} text-aquamarine`}>
+        <div key={index} className={`${styles["wrapper-container"]}`}>
           {text}
         </div>
       ))}

@@ -35,3 +35,8 @@
 .cursor-default {
     cursor: default;
 }
+
+.arena-font {
+    letter-spacing: -4px;
+    font-family: SilkScreen;
+}

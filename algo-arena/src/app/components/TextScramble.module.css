@@ -1,5 +1,8 @@
 .wrapper-container {
+    position: relative;
+    color: #E5E5E5;
+    z-index: 100;
     font-size: 52px;
     font-weight: 900;
-    text-shadow: -4px 4px 0px var(--bunting);
+    line-height: 84px;
 }

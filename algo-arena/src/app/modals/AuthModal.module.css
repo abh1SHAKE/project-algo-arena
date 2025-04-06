@@ -4,10 +4,11 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 1000;
 }
 
 .auth-modal-background {
-    opacity: 0.6;
+    opacity: 0.9;
 }
 
 .auth-modal-container {

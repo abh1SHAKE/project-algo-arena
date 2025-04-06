@@ -1,15 +1,21 @@
 .auth-page-wrapper {
   height: 100vh;
   position: relative;
-  background: linear-gradient(170deg, 
-      #141b2e 0%, 
-      #063c33 66%, 
-      #045B34 100%
+  overflow: hidden;
+  background: linear-gradient(162deg, 
+    #040507 0%, 
+    #181818 62%,
+    #000000 100%
   );
+}
+
+.navbar {
+  z-index: 10;
+  position: relative;
 }
 
 .text-scramble {
   position: absolute;
-  top: 220px;
+  top: 240px;
   left: 120px;
 }

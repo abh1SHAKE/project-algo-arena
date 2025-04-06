@@ -8,9 +8,10 @@
 
         .navbar-leftside {
             .logo-container {
-                font-size: 20px;
+                font-size: 32px;
                 font-weight: 700;
-                text-shadow: -4px 4px 0px var(--bunting);
+                letter-spacing: -4px;
+                font-family: SilkScreen;
             }
         }
 

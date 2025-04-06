@@ -11,10 +11,14 @@
 
     --gray-light: #666666;
     --gray-medium: #4c4c4c;
-    --gray-dark: #313131;
+    --gray-dark: #171717;
 
     --white: #ffffff;
-    --black: #090909;
+    --black: #000000;
+
+    --bunker: #040507;
+    --codgray: #191919;
+
 }
 
 .text-mirage { color: var(--mirage); }
@@ -29,6 +33,8 @@
 .text-gray-light { color: var(--gray-light); }
 .text-gray-medium { color: var(--gray-medium); }
 .text-gray-dark { color: var(--gray-dark); }
+.text-bunker { color: var(--bunker); }
+.text-codgray { color: var(--codgray); }
 .text-white { color: var(--white); }
 .text-black { color: var(--black); }
 
@@ -44,5 +50,7 @@
 .bg-gray-light { background-color: var(--gray-light); }
 .bg-gray-medium { background-color: var(--gray-medium); }
 .bg-gray-dark { background-color: var(--gray-dark); }
+.bg-bunker { background-color: var(--bunker); }
+.bg-codgray { background-color: var(--codgray); }
 .bg-white { background-color: var(--white); }
 .bg-black { background-color: var(--black); }

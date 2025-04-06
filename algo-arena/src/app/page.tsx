@@ -6,6 +6,7 @@ import TextScramble from './components/TextScramble';
 import { useSelector } from 'react-redux';
 import { RootState } from './redux/store';
 import AuthModal from './modals/AuthModal';
+import LandingVideo from './components/LandingVideo';
 
 const AuthPage:React.FC = () => {
     const authModal = useSelector((state: RootState) => state.authModal);
@@ -20,6 +21,9 @@ const AuthPage:React.FC = () => {
                 </div>
                 <div className={styles["auth-modal"]}>
                     {authModal.isOpen && <AuthModal />}
+                </div>
+                <div className={styles["landing-video"]}>
+                    <LandingVideo videoSource='/assets/watch-dogs-edit.mp4'/>
                 </div>
             </div>
         </div>

@@ -13,7 +13,7 @@ const Login:React.FC = () => {
     return (
         <form>
             <div className={`${styles["form-heading"]}`}>
-                LOG IN TO <span className='text-aquamarine'>ALGO - ARENA</span>
+                LOG IN TO <span className='text-aquamarine arena-font'>ALGO - ARENA</span>
             </div>
             <div className={`${styles["form-container"]} flex-column`}>
                 <div className={`${styles["form-field"]} flex-column`}>

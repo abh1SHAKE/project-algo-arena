@@ -2,6 +2,10 @@
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 28px;
+
+    span {
+        font-size: 24px;
+    }
 }
 
 .form-container {

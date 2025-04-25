@@ -37,7 +37,7 @@ const Signup:React.FC = () => {
             );
 
             if(!newUser) return;
-            router.push("/problems");
+            router.push("/arenas");
 
         } catch (error: unknown) {
             if (error instanceof Error) {

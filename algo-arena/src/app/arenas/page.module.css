@@ -1,0 +1,10 @@
+.arena-page-wrapper {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(162deg, 
+    #040507 0%, 
+    #181818 62%,
+    #000000 100%
+  );
+}

@@ -1,0 +1,11 @@
+.arena-carousel-wrapper {
+    gap: 72px;
+}
+
+.carousel-button {
+    transition: transform 0.3s ease;
+}
+
+.carousel-button:hover {
+    transform: scale(1.4);
+}

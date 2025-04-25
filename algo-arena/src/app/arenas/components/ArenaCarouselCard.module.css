@@ -1,0 +1,58 @@
+.arena-carousel-card-wrapper {
+    gap: 64px;
+    height: 75vh;
+
+    .arena-card-foreground {
+        z-index: 2;
+        font-weight: 900;
+        font-size: 140px;
+        letter-spacing: -20px;
+        mix-blend-mode: screen;
+        -webkit-text-stroke: 2px white;
+    }
+
+    .arena-card-background {
+        gap: 20px;
+        z-index: 1;
+
+        .arena-level {
+            width: 80px;
+            height: 200px;
+            background: #FF3734;    
+            background: linear-gradient(135deg,rgba(255, 55, 52, 1) 0%, rgba(255, 66, 66, 1) 36%, rgba(255, 166, 0, 1) 100%);
+        }
+
+        .easy {
+            background: #34ff8c;
+            background: linear-gradient(135deg,rgba(52, 255, 140, 1) 0%, rgba(142, 255, 66, 1) 64%, rgba(179, 255, 0, 1) 100%);
+        }
+
+        .medium {
+            background: #f1ff34;
+            background: linear-gradient(135deg,rgba(241, 255, 52, 1) 0%, rgba(255, 217, 66, 1) 64%, rgba(255, 191, 0, 1) 100%);
+        }
+
+        .hard {
+            background: #FF3734;    
+            background: linear-gradient(135deg,rgba(255, 55, 52, 1) 0%, rgba(255, 66, 66, 1) 36%, rgba(255, 166, 0, 1) 100%);
+        }
+    }
+
+    .carousel-bottom {
+        max-width: 45vw;
+
+        .arena-level-details {
+            color: #E5E5E5;
+            
+            .arena-level-title {
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            .arena-level-description {
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+    }
+}

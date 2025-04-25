@@ -1,6 +1,6 @@
 .arena-carousel-card-wrapper {
     gap: 64px;
-    height: 75vh;
+    height: 85vh;
 
     .arena-card-foreground {
         z-index: 2;
@@ -40,8 +40,10 @@
 
     .carousel-bottom {
         max-width: 45vw;
+        height: 200px;
 
         .arena-level-details {
+            gap: 20px;
             color: #E5E5E5;
             
             .arena-level-title {
@@ -52,6 +54,9 @@
             .arena-level-description {
                 font-size: 16px;
                 text-align: center;
+                height: 120px;
+                overflow-y: scroll;
+                scrollbar-width: none;
             }
         }
     }

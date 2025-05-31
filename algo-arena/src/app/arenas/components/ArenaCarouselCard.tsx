@@ -31,18 +31,13 @@ const ArenaCarouselCard: React.FC<ArenaCarouselCardProps> = ({ arena, direction 
     const variants = {
         enter: (direction: 'left' | 'right') => ({
             x: direction === 'right' ? 100 : -100,
-            opacity: 0,
+            opacity: 0.5,
         }),
         center: {
             x: 0,
             opacity: 1,
-            transition: { duration: 0.2 },
-        },
-        exit: (direction: 'left' | 'right') => ({
-            x: direction === 'right' ? -100 : 100,
-            opacity: 0,
-            transition: { duration: 0.2 },
-        }),
+            transition: { duration: 0.3 },
+        }
     };
 
     return (
@@ -60,17 +55,17 @@ const ArenaCarouselCard: React.FC<ArenaCarouselCardProps> = ({ arena, direction 
                         <div key={index} className={`${styles["arena-level"]} ${difficultyClass}`}></div>
                     ))}
                 </div>
-                <div className={`${styles["arena-card-foreground"]} arena-font`}>
+                <div className={`${styles["arena-card-foreground"]} arena-font cursor-pointer`}>
                     ARENA 
                 </div>
             </div>
 
             <div className={`${styles["carousel-bottom"]}`}>
                 <div className={`${styles["arena-level-details"]} flex-column justify-content-center align-items-center`}>
-                    <div className={`${styles["arena-level-title"]}`}>
+                    <div className={`${styles["arena-level-title"]} cursor-pointer`}>
                         {arena.arena_name}
                     </div>
-                    <div className={`${styles["arena-level-description"]}`}>
+                    <div className={`${styles["arena-level-description"]} cursor-pointer`}>
                         {arena.arena_description}
                     </div>
                 </div>

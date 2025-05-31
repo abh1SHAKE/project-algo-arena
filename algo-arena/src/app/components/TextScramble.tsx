@@ -20,7 +20,7 @@ const TextScramble: React.FC<TextScrambleProps> = ({
 }) => {
   const [displayTexts, setDisplayTexts] = useState<string[]>(words.map(() => ''));
   const intervalRefs = useRef<(ReturnType<typeof setInterval> | null)[]>(words.map(() => null));
-  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,./<>?';
+  const letters = '1234567890#$%';
   const animationState = useRef<'revealing' | 'pausing' | 'scrambling'>('revealing');
   const completedWords = useRef<boolean[]>(words.map(() => false));
 
@@ -116,7 +116,7 @@ const TextScramble: React.FC<TextScrambleProps> = ({
   return (
     <>
       {displayTexts.map((text, index) => (
-        <div key={index} className={`${styles["wrapper-container"]}`}>
+        <div key={index} className={`${styles["wrapper-container"]} cursor-default`}>
           {text}
         </div>
       ))}

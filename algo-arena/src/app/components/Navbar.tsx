@@ -14,7 +14,7 @@ const Navbar:React.FC = () => {
         <div className={`${styles["navbar-container-wrapper"]}`}>
             <div className={`${styles["navbar-container"]} flex-row justify-content-space-between`}>
                 <div className={`${styles["navbar-leftside"]} flex-row align-items-center`}>
-                    <div className={`${styles["logo-container"]} text-aquamarine`}>
+                    <div className={`${styles["logo-container"]} text-aquamarine cursor-pointer`}>
                         ALGO - ARENA
                     </div>
                 </div>

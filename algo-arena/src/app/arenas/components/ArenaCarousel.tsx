@@ -3,7 +3,6 @@ import React from 'react';
 import ArenaCarouselCard from './ArenaCarouselCard';
 import styles from './ArenaCarousel.module.css';
 import { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
 
 interface Arena {
     arena_level: number;
@@ -58,13 +57,11 @@ const ArenaCarousel:React.FC = () => {
                 </svg>
             </div>
             <div className={`${styles["carousel-container"]}`}>
-                <AnimatePresence mode="wait" initial={false}>
                     <ArenaCarouselCard
                         key={arenas[currentArenaIndex].arena_level}
                         arena={arenas[currentArenaIndex]}
                         direction={direction}
                     />
-        </AnimatePresence>
             </div>
             <div 
                 onClick={goForward}

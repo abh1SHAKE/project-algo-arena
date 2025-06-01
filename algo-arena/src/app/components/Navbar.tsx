@@ -11,7 +11,7 @@ const Navbar:React.FC = () => {
     };
 
     return (
-        <div className={`${styles["navbar-container-wrapper"]}`}>
+        <div className={`${styles["navbar-container-wrapper"]} user-select-none`}>
             <div className={`${styles["navbar-container"]} flex-row justify-content-space-between`}>
                 <div className={`${styles["navbar-leftside"]} flex-row align-items-center`}>
                     <div className={`${styles["logo-container"]} text-aquamarine cursor-pointer`}>

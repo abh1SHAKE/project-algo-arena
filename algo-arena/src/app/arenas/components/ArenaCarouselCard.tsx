@@ -49,7 +49,7 @@ const ArenaCarouselCard: React.FC<ArenaCarouselCardProps> = ({ arena, direction 
             animate="center"
             exit="exit"
         >
-            <div className={`${styles["carousel-top"]} position-relative flex-row align-items-center justify-content-center`}>
+            <div className={`${styles["carousel-top"]} position-relative flex-row align-items-center justify-content-center user-select-none`}>
                 <div className={`${styles["arena-card-background"]} position-absolute flex-row`}>
                     {arenaLevels.map((_, index) => (
                         <div key={index} className={`${styles["arena-level"]} ${difficultyClass}`}></div>
@@ -62,10 +62,10 @@ const ArenaCarouselCard: React.FC<ArenaCarouselCardProps> = ({ arena, direction 
 
             <div className={`${styles["carousel-bottom"]}`}>
                 <div className={`${styles["arena-level-details"]} flex-column justify-content-center align-items-center`}>
-                    <div className={`${styles["arena-level-title"]} cursor-pointer`}>
+                    <div className={`${styles["arena-level-title"]} cursor-pointer user-select-none`}>
                         {arena.arena_name}
                     </div>
-                    <div className={`${styles["arena-level-description"]} cursor-pointer`}>
+                    <div className={`${styles["arena-level-description"]} cursor-pointer user-select-none`}>
                         {arena.arena_description}
                     </div>
                 </div>

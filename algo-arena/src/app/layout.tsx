@@ -4,6 +4,7 @@ import { Silkscreen } from "next/font/google";
 import "./globals.css";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import FirebaseAuthListener from "./providers/FirebaseAuthListener";
 
 const poppins = Poppins({ 
   subsets: ["latin"],
@@ -24,11 +25,16 @@ export default function RootLayout({
 }>) {
   return (
     <Provider store={store}>
-      <html lang="en">
-        <body className={`${poppins.variable} ${silkscreen.variable}`}>
-          {children}
-        </body>
-      </html>
+      <FirebaseAuthListener>
+        <html lang="en">
+          <head>
+            <title>Algo-Arena</title>
+          </head>
+          <body className={`${poppins.variable} ${silkscreen.variable}`}>
+            {children}
+          </body>
+        </html>
+      </FirebaseAuthListener>
     </Provider>
   );
 }

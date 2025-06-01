@@ -1,41 +1,34 @@
 .navbar-container-wrapper {
     height: 100px;
     width: 100vw;
+}
 
-    .navbar-container {
-        margin: 0px 120px;
-        height: inherit;
+.navbar-container-wrapper .navbar-container {
+    margin: 0px 120px;
+    height: inherit;
+}
 
-        .navbar-leftside {
-            .logo-container {
-                font-size: 32px;
-                font-weight: 700;
-                letter-spacing: -4px;
-                font-family: SilkScreen;
-            }
-        }
+.navbar-container-wrapper .navbar-container .navbar-leftside .logo-container {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -4px;
+    font-family: SilkScreen;
+}
 
-        .navbar-rightside {
-            .cta-container {
-                button {
-                    font-weight: 700;
-                    cursor: pointer;
-                    color: var(--white);
-                    font-weight: 500;
-                    font-size: 16px;
-                    font-family: inherit;
-                    background: transparent;
-                    padding: 4px 8px;
-                    border-radius: 8px;
-                    border: 2px solid var(--aquamarine);
-                    transition: all 150ms ease-in-out;
-                }
+.navbar-container-wrapper .navbar-container .navbar-rightside .cta-container button {
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 16px;
+    font-family: inherit;
+    background: transparent;
+    padding: 4px 8px;
+    border-radius: 8px;
+    border: 2px solid var(--aquamarine);
+    transition: all 150ms ease-in-out;
+}
 
-                button:hover {
-                    background: var(--aquamarine);
-                    color: var(--mirage);
-                }
-            }
-        }
-    }
+.navbar-container-wrapper .navbar-container .navbar-rightside .cta-container button:hover {
+    background: var(--aquamarine);
+    color: var(--mirage);
 }

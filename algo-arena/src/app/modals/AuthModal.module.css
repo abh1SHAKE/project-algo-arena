@@ -15,21 +15,21 @@
     padding: 24px 32px;
     border-radius: 16px;
     background: var(--gray-dark);
+}
 
-    .modal-top-section {
-        margin-bottom: 12px;
-        flex-direction: row-reverse;
+.auth-modal-container .modal-top-section {
+    margin-bottom: 12px;
+    flex-direction: row-reverse;
+}
 
-        .close-icon {
-            cursor: pointer;
+.auth-modal-container .modal-top-section .close-icon {
+    cursor: pointer;
+}
 
-            svg {
-                transition: transform 150ms ease-in-out;
-            }
+.auth-modal-container .modal-top-section .close-icon svg {
+    transition: transform 150ms ease-in-out;
+}
 
-            svg:hover {
-                transform: scale(1.2);
-            }
-        }
-    }
+.auth-modal-container .modal-top-section .close-icon svg:hover {
+    transform: scale(1.2);
 }

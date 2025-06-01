@@ -1,0 +1,34 @@
+.loader-screen-wrapper {
+    gap: 12px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(162deg, 
+        #040507 0%, 
+        #181818 62%,
+        #000000 100%
+    );
+}
+
+.loader-screen-text {
+    font-size: 40px;
+    font-weight: 700;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.loader-screen-subtext {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(100%);
+    }
+    50% {
+        transform: scale(120%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}

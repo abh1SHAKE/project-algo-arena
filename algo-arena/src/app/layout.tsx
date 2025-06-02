@@ -28,7 +28,7 @@ export default function RootLayout({
       <FirebaseAuthListener>
         <html lang="en">
           <head>
-            <title>Algo-Arena</title>
+            <title>ALGO-ARENA</title>
           </head>
           <body className={`${poppins.variable} ${silkscreen.variable}`}>
             {children}

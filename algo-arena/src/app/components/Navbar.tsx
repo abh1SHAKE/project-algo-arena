@@ -1,14 +1,17 @@
 'use client'
 import React from 'react';
 import styles from './Navbar.module.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from '../redux/slices/authModalSlice';
+import { RootState } from '../redux/store';
 
 const Navbar:React.FC = () => {
     const dispatch = useDispatch();
     const handleClick = () => {
         dispatch(openModal("login"));
     };
+
+    const { currentUser, isLoading } = useSelector((state: RootState) => state.auth);
 
     return (
         <div className={`${styles["navbar-container-wrapper"]} user-select-none`}>
@@ -20,11 +23,20 @@ const Navbar:React.FC = () => {
                 </div>
                 <div className={`${styles["navbar-rightside"]} flex-row align-items-center`}>
                     <div className={`${styles["cta-container"]}`}>
-                        <button
-                            onClick={handleClick}
-                        >
-                            SIGN IN
-                        </button>
+                        {!isLoading ? (
+                            currentUser ? (
+                                <div>
+                                    <div className={`${styles["display-picture"]}`}>
+                                    </div>
+                                </div>
+                            ) : (
+                                <button
+                                    onClick={handleClick}
+                                >
+                                    SIGN IN
+                                </button>
+                            )
+                        ) : null}
                     </div>
                 </div>
             </div>

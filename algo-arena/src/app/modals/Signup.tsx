@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { auth } from '../firebase/firebase'
 import { useRouter } from 'next/navigation';
 import { setModalState } from '../redux/slices/authModalSlice';
+import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 const Signup:React.FC = () => {
@@ -24,6 +25,8 @@ const Signup:React.FC = () => {
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
 
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
     const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) => {
         setInputs((prev) => ({...prev, [e.target.name]: e.target.value}))
     }
@@ -37,6 +40,7 @@ const Signup:React.FC = () => {
             );
 
             if(!newUser) return;
+            await updateProfile({ displayName: inputs.displayName })
             router.push("/arenas");
 
         } catch (error: unknown) {

@@ -57,7 +57,7 @@ const Timer:React.FC = () => {
     }
 
     return (
-        <div className={`${styles["timer-container"]}`}>
+        <div className={`${styles["timer-container"]} flex-row align-items-center justify-content-center`}>
             {showTimer ? (
                 <div className={`${styles["timer-active-state"]} flex-row gap-8`}>
                     <div className={`${styles["pause-icon"]} flex-row cursor-pointer`} onClick={togglePause}>
@@ -65,7 +65,7 @@ const Timer:React.FC = () => {
 	                        <path fill="currentColor" d="M23 2v20h-1v1h-7v-1h-1V2h1V1h7v1zM9 2h1v20H9v1H2v-1H1V2h1V1h7z" />
                         </svg>
                     </div>
-                    <div className={`${styles["timer"]} flex-row`}>
+                    <div className={`${styles["timer"]} flex-row text-aquamarine`}>
                         {formatTime(time)}
                     </div>
                     <div className={`${styles["reset-timer-icon"]} flex-row cursor-pointer`} onClick={resetTimer}>

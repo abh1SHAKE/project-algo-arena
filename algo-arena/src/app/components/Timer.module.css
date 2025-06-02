@@ -14,12 +14,6 @@
     margin-left: -2px;
 }
 
-.timer-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .timer-inactive-state {
   width: 36px;
   overflow: hidden;
@@ -32,13 +26,6 @@
 
 .timer-inactive-state.expanded {
   width: 128px;
-}
-
-.timer-text {
-  opacity: 0;
-  font-size: 16px;
-  color: aquamarine;
-  transition: opacity 0.3s ease;
 }
 
 .timer-inactive-state:hover .timer-text,
@@ -58,12 +45,5 @@
 .timer {
   width: 68px;
   font-size: 16px;
-}
-
-.icon {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 

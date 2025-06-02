@@ -116,7 +116,7 @@ const TextScramble: React.FC<TextScrambleProps> = ({
   return (
     <>
       {displayTexts.map((text, index) => (
-        <div key={index} className={`${styles["wrapper-container"]} cursor-default`}>
+        <div key={index} className={`${styles["wrapper-container"]} cursor-default user-select-none`}>
           {text}
         </div>
       ))}

@@ -4,6 +4,7 @@ import styles from './Signup.module.css';
 import { useDispatch } from 'react-redux';
 import { auth } from '../firebase/firebase'
 import { useRouter } from 'next/navigation';
+import { setUser } from '../redux/slices/authSlice';
 import { setModalState } from '../redux/slices/authModalSlice';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -39,8 +40,19 @@ const Signup:React.FC = () => {
                 inputs.email, inputs.password
             );
 
-            if(!newUser) return;
-            await updateProfile({ displayName: inputs.displayName })
+            if (!newUser) return;
+            await updateProfile({ displayName: inputs.displayName });
+            await auth.currentUser?.reload();
+
+            const currentUser = auth.currentUser;
+            if (currentUser) {
+                dispatch(setUser({
+                    uid: currentUser.uid,
+                    email: currentUser.email || '',
+                    displayName: currentUser.displayName || ''
+                }))
+            } 
+
             router.push("/arenas");
 
         } catch (error: unknown) {

@@ -4,6 +4,7 @@ import styles from './Navbar.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from '../redux/slices/authModalSlice';
 import { RootState } from '../redux/store';
+import Logout from '../buttons/Logout';
 
 const Navbar:React.FC = () => {
     const dispatch = useDispatch();
@@ -25,8 +26,12 @@ const Navbar:React.FC = () => {
                     <div className={`${styles["cta-container"]}`}>
                         {!isLoading ? (
                             currentUser ? (
-                                <div>
-                                    <div className={`${styles["display-picture"]}`}>
+                                <div className='flex-row align-items-center gap-20'>
+                                    <div className={`${styles["display-picture"]} cursor-pointer`}>
+                                    </div>
+                                    <div>{currentUser.displayName}</div>
+                                    <div>
+                                        <Logout></Logout>
                                     </div>
                                 </div>
                             ) : (

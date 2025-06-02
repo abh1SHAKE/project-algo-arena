@@ -1,0 +1,8 @@
+.logout-cta {
+    transition: transform 0.2s ease;
+}
+
+.logout-cta:hover {
+    transform: scale(1.2);
+    color: var(--aquamarine);
+}

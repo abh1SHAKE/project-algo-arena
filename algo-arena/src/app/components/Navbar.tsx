@@ -5,8 +5,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from '../redux/slices/authModalSlice';
 import { RootState } from '../redux/store';
 import Logout from '../buttons/Logout';
+import Timer from './Timer';
 
-const Navbar:React.FC = () => {
+type NavbarProps = {
+    problemPage?: boolean;
+}
+
+const Navbar:React.FC<NavbarProps> = ({ problemPage }) => {
     const dispatch = useDispatch();
     const handleClick = () => {
         dispatch(openModal("login"));
@@ -27,8 +32,12 @@ const Navbar:React.FC = () => {
                         {!isLoading ? (
                             currentUser ? (
                                 <div className='flex-row align-items-center gap-20'>
-                                    <div className={`${styles["display-picture"]} cursor-pointer`}>
-                                    </div>
+                                    {problemPage ? (
+                                        <Timer/>
+                                    ) : (
+                                        <div className={`${styles["display-picture"]} cursor-pointer`}>
+                                        </div>
+                                    )}
                                     <div>
                                         <Logout></Logout>
                                     </div>

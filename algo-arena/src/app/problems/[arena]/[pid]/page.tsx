@@ -8,7 +8,7 @@ const ProblemPage:React.FC = () => {
         <RequireAuth>
             <div className={`${styles["problem-page-wrapper"]}`}>
                 <div className={`${styles["navbar"]}`}>
-                    <Navbar/>
+                    <Navbar problemPage={true}/>
                 </div>
             </div>
         </RequireAuth>

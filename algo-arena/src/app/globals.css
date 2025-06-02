@@ -11,3 +11,28 @@ body {
   color: #ffffff;
   font-family: var(--font-poppins);
 }
+
+.Toastify__toast {
+  font-family: var(--font-poppins);
+  border-radius: 16px;
+  width: fit-content;
+  overflow: hidden;
+  padding: 12px 20px;
+  background: var(--gray-dark);
+  color: var(--white);
+  font-weight: 200;
+}
+
+.Toastify__close-button {
+  position: unset;
+  margin-left: 16px;
+  color: var(--white);
+}
+
+.Toastify__toast--success .Toastify__toast-icon svg {
+  fill: var(--aquamarine);
+}
+
+.Toastify__toast--success .Toastify__progress-bar {
+  background: var(--aquamarine);
+}

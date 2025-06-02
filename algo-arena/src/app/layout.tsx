@@ -5,6 +5,7 @@ import "./globals.css";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import FirebaseAuthListener from "./providers/FirebaseAuthListener";
+import { ToastContainer } from "react-toastify";
 
 const poppins = Poppins({ 
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
           </head>
           <body className={`${poppins.variable} ${silkscreen.variable}`}>
             {children}
+            <ToastContainer/>
           </body>
         </html>
       </FirebaseAuthListener>

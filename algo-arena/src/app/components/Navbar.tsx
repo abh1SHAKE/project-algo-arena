@@ -29,7 +29,6 @@ const Navbar:React.FC = () => {
                                 <div className='flex-row align-items-center gap-20'>
                                     <div className={`${styles["display-picture"]} cursor-pointer`}>
                                     </div>
-                                    <div>{currentUser.displayName}</div>
                                     <div>
                                         <Logout></Logout>
                                     </div>

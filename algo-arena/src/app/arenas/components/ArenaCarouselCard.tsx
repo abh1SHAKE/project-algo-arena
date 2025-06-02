@@ -2,6 +2,9 @@
 import React from 'react';
 import styles from './ArenaCarouselCard.module.css'
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
+import { getRandomProblemFromArena } from '@/app/services/arenaService';
+import { toast, Slide } from 'react-toastify';
 
 interface Arena {
     arena_level: number;
@@ -15,6 +18,7 @@ interface ArenaCarouselCardProps {
 }
 
 const ArenaCarouselCard: React.FC<ArenaCarouselCardProps> = ({ arena, direction }) => {
+    const router = useRouter();
     const arenaLevels = Array.from({ length: arena.arena_level }, (_, index) => index);
 
     const getDifficultyClass = (level: number) => {
@@ -27,6 +31,19 @@ const ArenaCarouselCard: React.FC<ArenaCarouselCardProps> = ({ arena, direction 
     };
 
     const difficultyClass = getDifficultyClass(arena.arena_level);
+
+    const handleEnterArena = async () => {
+        const arenaKey = `arena${arena.arena_level}`;
+        const randomProblem = getRandomProblemFromArena(arenaKey);
+
+        if (randomProblem) {
+            router.push(`/problems/${arenaKey}/${randomProblem.id}`);
+        } else {
+            toast.error("Error fetching problem for the arena.", {
+                position: 'top-center', autoClose: 3000, transition: Slide,
+            });
+        }
+    }
 
     const variants = {
         enter: (direction: 'left' | 'right') => ({
@@ -49,7 +66,10 @@ const ArenaCarouselCard: React.FC<ArenaCarouselCardProps> = ({ arena, direction 
             animate="center"
             exit="exit"
         >
-            <div className={`${styles["carousel-top"]} position-relative flex-row align-items-center justify-content-center user-select-none`}>
+            <div 
+                className={`${styles["carousel-top"]} position-relative flex-row align-items-center justify-content-center user-select-none`}
+                onClick={handleEnterArena}
+            >
                 <div className={`${styles["arena-card-background"]} position-absolute flex-row`}>
                     {arenaLevels.map((_, index) => (
                         <div key={index} className={`${styles["arena-level"]} ${difficultyClass}`}></div>
@@ -60,7 +80,10 @@ const ArenaCarouselCard: React.FC<ArenaCarouselCardProps> = ({ arena, direction 
                 </div>
             </div>
 
-            <div className={`${styles["carousel-bottom"]}`}>
+            <div 
+                className={`${styles["carousel-bottom"]}`}
+                onClick={handleEnterArena}
+            >
                 <div className={`${styles["arena-level-details"]} flex-column justify-content-center align-items-center`}>
                     <div className={`${styles["arena-level-title"]} cursor-pointer user-select-none`}>
                         {arena.arena_name}

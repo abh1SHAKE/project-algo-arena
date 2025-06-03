@@ -3,8 +3,7 @@ import styles from './ProblemDetails.module.css';
 
 const ProblemDetails:React.FC = () => {
     return (
-        <div className={`${styles["problem-details-container"]} flex-column gap-20`}>
-            {/* PROBLEM HEADING SECTION */}
+        <div className={`${styles["problem-details-container"]} flex-column gap-12`}>
             <div className={`${styles["problem-heading-section"]} flex-column gap-12`}>
                 <div className={`${styles["problem-heading"]}`}>
                     TWO - SUM
@@ -19,7 +18,6 @@ const ProblemDetails:React.FC = () => {
                 </div>
             </div>
 
-            {/* DESCRIPTION AND TESCASES */}
             <div className={`${styles["description-and-examples"]} flex-column gap-28`}>
                 <div className={`${styles["problem-description"]} flex-column gap-12`}>
                     <p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return indices of the two numbers such that they add up to <code>target</code>.</p>
@@ -60,7 +58,6 @@ const ProblemDetails:React.FC = () => {
                 </div>
             </div>
 
-            {/* PROBLEM CONSTRAINTS */}
             <div className={`${styles["problem-constraints"]} flex-column gap-8`}>
                 <div><strong>Constraints:</strong></div>
                 <div className={`${styles["pointers"]}`}>

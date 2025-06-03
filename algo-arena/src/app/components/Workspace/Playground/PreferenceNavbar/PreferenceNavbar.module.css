@@ -1,0 +1,23 @@
+.preference-navbar {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #212121;
+}
+
+.language-dropdown {
+    padding: 2px 8px;
+    color: #cdcdcd;
+    border-radius: 8px;
+    background: #1b1b1b;
+    border: 2px solid var(--gray-medium);
+}
+
+.setting-icon {
+    padding: 4px;
+    color: #cdcdcd;
+}
+
+.setting-icon:hover {
+    border-radius: 4px;
+    background: var(--gray-dark);
+}

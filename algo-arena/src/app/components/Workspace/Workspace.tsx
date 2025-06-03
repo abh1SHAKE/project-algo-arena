@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Split from 'react-split';
 import styles from './Workspace.module.css';
 import ProblemDetails from './ProblemDetails/ProblemDetails';
+import Playground from './Playground/Playground';
 
 const Workspace:React.FC = () => {
     const [minSize, setMinSize] = useState<[number, number]>([0,0]);
@@ -31,8 +32,8 @@ const Workspace:React.FC = () => {
             <div className={`${styles["problem-details"]}`}>
                 <ProblemDetails/>
             </div>
-            <div className={`${styles["code-editor-section"]}`}>
-
+            <div className={`${styles["playground-section"]}`}>
+                <Playground/>
             </div>
         </Split>
     )

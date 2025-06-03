@@ -6,7 +6,7 @@
 .pause-icon:hover,
 .reset-timer-icon:hover
  {
-    background: var(--gray-medium);
+    background: var(--gray-dark);
     border-radius: 4px;
 }
 

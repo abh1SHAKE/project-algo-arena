@@ -61,9 +61,15 @@ const Timer:React.FC = () => {
             {showTimer ? (
                 <div className={`${styles["timer-active-state"]} flex-row gap-8`}>
                     <div className={`${styles["pause-icon"]} flex-row cursor-pointer`} onClick={togglePause}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-	                        <path fill="currentColor" d="M23 2v20h-1v1h-7v-1h-1V2h1V1h7v1zM9 2h1v20H9v1H2v-1H1V2h1V1h7z" />
-                        </svg>
+                        { isRunning ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+	                            <path fill="currentColor" d="M23 2v20h-1v1h-7v-1h-1V2h1V1h7v1zM9 2h1v20H9v1H2v-1H1V2h1V1h7z" />
+                            </svg>
+                        ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 28 28">
+	                            <path fill="currentColor" d="M10.138 3.382C8.304 2.31 6 3.632 6 5.756v16.489c0 2.123 2.304 3.445 4.138 2.374l14.697-8.59c1.552-.907 1.552-3.15 0-4.057z" />
+                            </svg>
+                        )}
                     </div>
                     <div className={`${styles["timer"]} flex-row text-aquamarine`}>
                         {formatTime(time)}

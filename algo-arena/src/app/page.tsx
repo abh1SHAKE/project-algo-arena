@@ -1,12 +1,12 @@
 'use client'
 import React from 'react';
 import styles from './page.module.css';
-import Navbar from './components/Navbar';
-import TextScramble from './components/TextScramble';
+import Navbar from './components/Navbar/Navbar';
+import TextScramble from './components/TextScramble/TextScramble';
 import { useSelector } from 'react-redux';
 import { RootState } from './redux/store';
 import AuthModal from './modals/AuthModal';
-import LandingVideo from './components/LandingVideo';
+import LandingVideo from './components/LandingVideo/LandingVideo';
 import RequireGuest from './components/RequireGuest';
 
 const AuthPage:React.FC = () => {

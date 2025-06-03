@@ -21,7 +21,7 @@
   transition: width 0.4s ease;
   padding: 8px 6px;
   border-radius: 8px;
-  background: #323232;
+  background: #212121;
 }
 
 .timer-inactive-state.expanded {
@@ -38,7 +38,7 @@
   padding: 8px;
   color: #dfdfdf;
   border-radius: 8px;
-  background: #323232;
+  background: #212121;
   align-items: center;
 }
 

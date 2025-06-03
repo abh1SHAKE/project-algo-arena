@@ -1,0 +1,46 @@
+.problem-heading {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.problem-heading-section {
+    line-height: 20px;
+}
+
+.pointers {
+    padding-left: 16px;
+}
+
+.problem-description,
+.problem-examples,
+.problem-constraints {
+    color: #d4d4d4;
+}
+
+.problem-topic-pills {
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+.topic-pill {
+    color: #cdcdcd;
+    background: #1b1b1b;
+    border-radius: 24px;
+    padding: 2px 8px;
+    border: 2px solid var(--gray-medium);
+}
+
+.example {
+    border-radius: 12px;
+    padding: 16px 12px;
+    background: #1b1b1b;
+    border: 2px solid var(--gray-medium);
+}
+
+.problem-heading-section,
+.description-and-examples,
+.problem-constraints {
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #212121;
+}

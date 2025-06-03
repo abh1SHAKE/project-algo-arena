@@ -2,10 +2,10 @@
 import React from 'react';
 import styles from './Navbar.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { openModal } from '../redux/slices/authModalSlice';
-import { RootState } from '../redux/store';
-import Logout from '../buttons/Logout';
-import Timer from './Timer';
+import { openModal } from '@/app/redux/slices/authModalSlice';
+import { RootState } from '@/app/redux/store';
+import Logout from '@/app/buttons/Logout';
+import Timer from '../Timer/Timer';
 
 type NavbarProps = {
     problemPage?: boolean;

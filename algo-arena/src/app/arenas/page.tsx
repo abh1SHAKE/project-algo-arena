@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './page.module.css'
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar/Navbar';
 import ArenaCarousel from './components/ArenaCarousel';
 import RequireAuth from '../components/RequireAuth';
 

@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import LoaderScreen from "./LoaderScreen";
+import LoaderScreen from "./LoaderScreen/LoaderScreen";
 
 export default function RequireAuth({ children }: { children: React.ReactNode }) {
   const { currentUser, isLoading } = useSelector((state: RootState) => state.auth);

@@ -17,6 +17,7 @@
     "react-dom": "^19.0.0",
     "react-firebase-hooks": "^5.1.1",
     "react-redux": "^9.2.0",
+    "react-split": "^2.0.14",
     "react-toastify": "^11.0.5"
   },
   "devDependencies": {

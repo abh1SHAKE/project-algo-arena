@@ -1,5 +1,5 @@
 .workspace-container {
-    margin: 0px 40px 0px 40px;
+    margin: 0px 80px;
     height: calc(100vh - 120px);
 }
 
@@ -7,4 +7,8 @@
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none;
+}
+
+.playground-section {
+    overflow: hidden;
 }

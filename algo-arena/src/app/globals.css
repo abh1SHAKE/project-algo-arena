@@ -37,13 +37,7 @@ body {
   background: var(--aquamarine);
 }
 
-/* .split {
-  display: flex;
-  flex-direction: row;
-} */
-
 .gutter {
-  /* width: 8px !important; */
   background-color: #3b3b3b;
 }
 

@@ -1,0 +1,11 @@
+.playground {
+    height: calc(100vh - 120px);
+}
+
+.playground-split {
+    height: 100%;
+}
+
+.code-editor {
+    overflow: hidden;
+}

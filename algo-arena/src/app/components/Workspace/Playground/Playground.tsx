@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './Playground.module.css';
 import Split from 'react-split';
+import CodeEditor from './CodeEditor/CodeEditor';
 import PreferenceNavbar from './PreferenceNavbar/PreferenceNavbar';
+import Testcases from './Testcases/Testcases';
 
 const Playground:React.FC = () => {
     return (
@@ -13,12 +15,16 @@ const Playground:React.FC = () => {
                 <Split 
                     className={`${styles["playground-split"]} flex-column split`}
                     direction='vertical'
+                    sizes={[90, 10]}
+                    minSize={[92, 92]}
+                    dragInterval={1}
+                    snapOffset={0}
                 >
                     <div className={`${styles["code-editor"]}`}>
-                        SECTION1
+                        <CodeEditor/>
                     </div>
                     <div className={`${styles["testcases"]}`}>
-                        SECTION2
+                        <Testcases/>
                     </div>
                 </Split>
             </div>

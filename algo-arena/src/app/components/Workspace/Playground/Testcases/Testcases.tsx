@@ -62,7 +62,7 @@ const Testcases: React.FC<TestcasesProps> = ({
       const tokens = batchRes.data.map((item: { token: string }) => item.token);
 
       const results = await Promise.all(
-        tokens.map(async (token) => {
+        tokens.map(async (token: string) => {
           let result;
           while (true) {
             const res = await axios.get(

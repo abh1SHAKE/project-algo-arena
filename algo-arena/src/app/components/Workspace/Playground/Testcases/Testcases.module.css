@@ -24,7 +24,14 @@
 }
 
 .tab {
+    padding: 2px 8px;
     color: #cdcdcd;
+}
+
+.tab:hover {
+    padding: 2px 8px;
+    border-radius: 8px;
+    background: #121212;
 }
 
 .testcases-tab-section {
@@ -45,7 +52,7 @@
 
 .testcase-tab:hover {
     color: var(--aquamarine);
-    font-weight: 600;
+    font-weight: 500;
     border: 2px solid var(--gray-medium);
 }
 
@@ -74,4 +81,10 @@
 
 .label {
     font-size: 14px;
+}
+
+.active {
+    color: var(--aquamarine) !important;
+    font-weight: 500 !important;
+    border: 2px solid var(--gray-medium) !important;
 }

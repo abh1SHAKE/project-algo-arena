@@ -8,9 +8,11 @@ interface Testcase {
 
 interface TestcasesProps {
     testcases: Testcase[];
+    isExpanded?: boolean;
+    onTabClick?: () => void;
 }
 
-const Testcases: React.FC<TestcasesProps> = ({ testcases }) => {
+const Testcases: React.FC<TestcasesProps> = ({ testcases, onTabClick, isExpanded }) => {
     const [activeTestcase, setActiveTestcase] = useState(0);
 
     const formatTestcaseData = (data: string) => {
@@ -33,9 +35,14 @@ const Testcases: React.FC<TestcasesProps> = ({ testcases }) => {
                         <div className={`${styles["run-cta"]} flex-row cursor-pointer`}>RUN</div>
                         <div className={`${styles["submit-cta"]} flex-row cursor-pointer`}>SUBMIT</div>
                     </div>
-                    <div className={`${styles["tab"]} flex-row align-items-center gap-4 cursor-pointer`}>
+                    <div className={`${styles["tab"]} flex-row align-items-center gap-4 cursor-pointer`} onClick={onTabClick}>
                         TESTCASES
-                        <div className='flex-row'>
+                        <div className={`${styles["chevron-icon"]} flex-row`}
+                            style={{
+                                transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
+                                transition: 'transform 0.3s ease',
+                            }}
+                        >
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
                                 <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m6 9l6 6l6-6" />
                             </svg>

@@ -174,6 +174,7 @@ Requirements:
 - Ensure JSON is properly formatted
 - No markdown formatting, just pure JSON
 - Do not repeat popular problems like "Two Sum", "Add Two Numbers", or "Median of Two Sorted Arrays". Generate fresh and creative variations.
+- IMPORTANT: The outputs in "problem_examples" and "problem_testcases" must match exactly. Their input-output pairs should be consistent without any contradictions.
 `;
 
     const result = await model.generateContent(prompt);

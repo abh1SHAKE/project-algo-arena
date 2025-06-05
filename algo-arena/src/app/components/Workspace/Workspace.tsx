@@ -4,8 +4,13 @@ import Split from 'react-split';
 import styles from './Workspace.module.css';
 import ProblemDetails from './ProblemDetails/ProblemDetails';
 import Playground from './Playground/Playground';
+import { ProblemData } from '@/types/problem';
 
-const Workspace:React.FC = () => {
+interface WorkspaceProps {
+    problemData: ProblemData;
+}
+
+const Workspace: React.FC<WorkspaceProps> = ({ problemData }) => {
     const [minSize, setMinSize] = useState<[number, number]>([0,0]);
 
     useEffect(() => {
@@ -30,12 +35,13 @@ const Workspace:React.FC = () => {
             snapOffset={0}
         >
             <div className={`${styles["problem-details"]}`}>
-                <ProblemDetails/>
+                <ProblemDetails problemData={problemData} />
             </div>
             <div className={`${styles["playground-section"]}`}>
-                <Playground/>
+                <Playground problemData={problemData} />
             </div>
         </Split>
     )
 }
+
 export default Workspace;

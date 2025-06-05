@@ -1,7 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Testcases.module.css';
 
-const Testcases:React.FC = () => {
+interface Testcase {
+    input: string;
+    output: string;
+}
+
+interface TestcasesProps {
+    testcases: Testcase[];
+}
+
+const Testcases: React.FC<TestcasesProps> = ({ testcases }) => {
+    const [activeTestcase, setActiveTestcase] = useState(0);
+
+    const formatTestcaseData = (data: string) => {
+        return data.replace(/\\n/g, '\n');
+    };
+
+    const parseInput = (input: string) => {
+        const lines = formatTestcaseData(input).split('\n');
+        return lines.map((line, index) => ({
+            label: `Input ${index + 1}:`,
+            value: line.trim()
+        }));
+    };
+
     return (
         <div className={`${styles["testcases-wrapper"]} position-relative`}>
             <div className={`${styles["top-section"]}`}>
@@ -14,51 +37,57 @@ const Testcases:React.FC = () => {
                         TESTCASES
                         <div className='flex-row'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
-	                            <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m6 9l6 6l6-6" />
+                                <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m6 9l6 6l6-6" />
                             </svg>
                         </div>
                     </div>
                 </div>
                 <div className={`${styles["testcases-tab-section"]} flex-row gap-24`}>
-                    <div className={`${styles["testcase-tab"]}`}>
-                        CASE 1
-                    </div>
-                    <div className={`${styles["testcase-tab"]}`}>
-                        CASE 2
-                    </div>
-                    <div className={`${styles["testcase-tab"]}`}>
-                        CASE 3
-                    </div>
+                    {testcases.map((_, index) => (
+                        <div 
+                            key={index}
+                            className={`${styles["testcase-tab"]} ${activeTestcase === index ? styles["active"] : ""}`}
+                            onClick={() => setActiveTestcase(index)}
+                        >
+                            CASE {index + 1}
+                        </div>
+                    ))}
                 </div>
             </div>
 
-            <div className={`${styles["input-output-wrapper"]}`}>
-                <div className={`${styles["io-container"]} flex-column gap-8`}>
-                    <div>Input: </div>
-                    <div className={`${styles["container"]}`}>
-                        {`nums = [2,3,1,1,4]`}
-                    </div>
-                </div>
-            </div>
+            {testcases.length > 0 && testcases[activeTestcase] && (
+                <>
+                    {parseInput(testcases[activeTestcase].input).map((inputItem, index) => (
+                        <div key={index} className={`${styles["input-output-wrapper"]}`}>
+                            <div className={`${styles["io-container"]} flex-column gap-8`}>
+                                <div className={`${styles["label"]}`}>{inputItem.label}</div>
+                                <div className={`${styles["container"]}`}>
+                                    {inputItem.value}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
 
-            <div className={`${styles["input-output-wrapper"]}`}>
-                <div className={`${styles["io-container"]} flex-column gap-8`}>
-                    <div>Input: </div>
-                    <div className={`${styles["container"]}`}>
-                        {`nums = [2,3,1,1,4]`}
+                    <div className={`${styles["input-output-wrapper"]}`}>
+                        <div className={`${styles["io-container"]} flex-column gap-8`}>
+                            <div className={`${styles["label"]}`}>Expected Output:</div>
+                            <div className={`${styles["container"]}`}>
+                                {formatTestcaseData(testcases[activeTestcase].output)}
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </>
+            )}
 
-            <div className={`${styles["input-output-wrapper"]}`}>
-                <div className={`${styles["io-container"]} flex-column gap-8`}>
-                    <div>Input: </div>
-                    <div className={`${styles["container"]}`}>
-                        {`nums = [2,3,1,1,4]`}
+            {testcases.length === 0 && (
+                <div className={`${styles["input-output-wrapper"]}`}>
+                    <div className={`${styles["io-container"]} flex-column gap-8`}>
+                        <div>No testcases available</div>
                     </div>
                 </div>
-            </div>
+            )}
         </div>
     )
 }
+
 export default Testcases;

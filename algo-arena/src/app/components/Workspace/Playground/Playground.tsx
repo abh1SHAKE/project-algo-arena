@@ -4,8 +4,13 @@ import Split from 'react-split';
 import CodeEditor from './CodeEditor/CodeEditor';
 import PreferenceNavbar from './PreferenceNavbar/PreferenceNavbar';
 import Testcases from './Testcases/Testcases';
+import { ProblemData } from '@/types/problem';
 
-const Playground:React.FC = () => {
+interface PlaygroundProps {
+    problemData: ProblemData;
+}
+
+const Playground: React.FC<PlaygroundProps> = ({ problemData }) => {
     return (
         <div className={`${styles["playground-wrapper"]}`}>
             <div className={`${styles["preference-navbar"]}`}>
@@ -21,14 +26,15 @@ const Playground:React.FC = () => {
                     snapOffset={0}
                 >
                     <div className={`${styles["code-editor"]}`}>
-                        <CodeEditor/>
+                        <CodeEditor boilerplateCode={problemData.boilerplate_code} />
                     </div>
                     <div className={`${styles["testcases"]}`}>
-                        <Testcases/>
+                        <Testcases testcases={problemData.problem_testcases} />
                     </div>
                 </Split>
             </div>
         </div>
     )
 }
+
 export default Playground;

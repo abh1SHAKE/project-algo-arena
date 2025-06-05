@@ -37,7 +37,7 @@ const ArenaCarouselCard: React.FC<ArenaCarouselCardProps> = ({ arena, direction 
         const randomProblem = getRandomProblemFromArena(arenaKey);
 
         if (randomProblem) {
-            router.push(`/${arenaKey}/problem/${randomProblem.id}`);
+            router.push(`/${arenaKey}/problem`);
         } else {
             toast.error("Error fetching problem for the arena.", {
                 position: 'top-center', autoClose: 3000, transition: Slide,

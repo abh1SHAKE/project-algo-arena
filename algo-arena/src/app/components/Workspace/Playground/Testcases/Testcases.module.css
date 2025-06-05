@@ -2,8 +2,7 @@
     padding: 8px;
 }
 
-.run-cta,
-.submit-cta {
+.run-cta {
     width: fit-content;
     padding: 2px 8px;
     color: #cdcdcd;
@@ -13,11 +12,6 @@
 }
 
 .run-cta:hover {
-    background: #242424;
-    border: 2px solid #979797;
-}
-
-.submit-cta:hover {
     background: #242424;
     color: var(--aquamarine);
     border: 2px solid var(--aquamarine);
@@ -87,4 +81,10 @@
     color: var(--aquamarine) !important;
     font-weight: 500 !important;
     border: 2px solid var(--gray-medium) !important;
+}
+
+.status {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
 }

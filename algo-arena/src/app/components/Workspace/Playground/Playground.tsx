@@ -12,12 +12,10 @@ interface PlaygroundProps {
 
 const Playground: React.FC<PlaygroundProps> = ({ problemData }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [splitKey, setSplitKey] = useState(0);
   const [code, setCode] = useState(problemData.boilerplate_code);
 
   const toggleTestcaseSection = () => {
     setIsExpanded((prev) => !prev);
-    setSplitKey((prev) => prev + 1);
   };
 
   const splitSizes = isExpanded ? [10, 90] : [90, 10];
@@ -29,7 +27,6 @@ const Playground: React.FC<PlaygroundProps> = ({ problemData }) => {
       </div>
       <div className={`${styles["playground"]}`}>
         <Split
-          key={splitKey}
           className={`${styles["playground-split"]} flex-column split`}
           direction="vertical"
           sizes={splitSizes}

@@ -10,14 +10,6 @@ type TooltipProps = {
 
 const Tooltip:React.FC<TooltipProps> = ({children, text, position = 'bottom'}) => {
     const [visible, setVisible] = useState(false);
-
-    useEffect(() => {
-        if (visible) {
-            console.log("TOOLTIP VISIBLE");
-        } else {
-            console.log("TOOLTIP NOT VISIBLE");
-        }
-    },[visible]);
     return (
         <div 
             className={`${styles["tooltip-wrapper"]}`}

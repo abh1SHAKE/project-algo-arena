@@ -38,7 +38,7 @@ const Navbar:React.FC<NavbarProps> = ({ problemPage }) => {
                                         <div className={`${styles["display-picture"]} cursor-pointer`}>
                                         </div>
                                     )}
-                                    <div>
+                                    <div className='flex-row'>
                                         <Logout></Logout>
                                     </div>
                                 </div>
